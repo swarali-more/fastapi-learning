@@ -36,3 +36,9 @@ def skills():
 @app.get("/health")
 def health():
     return {"status": "API is healthy"}
+
+@app.get("/skills")
+def skills():
+    return {
+        "skills": ["Python", "FastAPI", "Git", "React"]
+    }
