@@ -1,10 +1,18 @@
+# Daily GitHub commit for contribution graph
+
+
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message":"Hello Swarali!"}
+     return {
+        "message": "Hello Swarali 👋",
+        "project": "FastAPI Learning",
+        "status": "Running successfully"
+    }
 
 
 @app.get("/about")
@@ -19,3 +27,8 @@ def get_user(name:str):
 @app.get("/multiply/{x}/{y}")
 def multi(x:int,y:int):
     return {"result": x * y}
+
+
+@app.get("/skills")
+def skills():
+    return {"skills": ["Python", "FastAPI", "Git", "React"]}
