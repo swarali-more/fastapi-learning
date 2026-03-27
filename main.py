@@ -32,3 +32,7 @@ def multi(x:int,y:int):
 @app.get("/skills")
 def skills():
     return {"skills": ["Python", "FastAPI", "Git", "React"]}
+
+@app.get("/health")
+def health():
+    return {"status": "API is healthy"}
