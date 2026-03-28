@@ -1,5 +1,5 @@
 # Daily GitHub commit for contribution graph
-
+# FastAPI practice project
 
 
 from fastapi import FastAPI
@@ -46,3 +46,8 @@ def skills():
 @app.get("/search")
 def search(q: str):
     return {"search_query": q}
+
+
+@app.get("/version")
+def version():
+    return {"version": "1.0.0"}
