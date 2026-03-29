@@ -8,8 +8,6 @@ def home():
     return {"message":"Hello World!"}
 
 #route 2 - About
-
-#@app.get("/about")
-
-#def about():
+@app.get("/about")
+def about():
     return{"message:" "I am learning FastAPI!"}
