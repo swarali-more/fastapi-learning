@@ -62,3 +62,17 @@ def get_students(collage_name: str , subject: str = "all"):
 @app.get("/product")
 def get_product(category: str,price: int = 100,discount: bool = False):
     return {"Category":category, "Price": price ,"Discount": discount}
+
+
+
+#Path + Query
+#User_Post_Limit
+@app.get("/user/{user_id}/posts")
+def get_user_posts(user_id: int, limit: int = 5):
+    return {"User_Id": user_id , "Limit": limit}
+
+#Task: 1
+#Shop_Product_limit
+@app.get("/shop/{shop_id}/products")
+def shop_info(shop_id: int , limit: int = 5 , discount: bool = False ):
+    return {"Shop_Id": shop_id , "Limit": limit , "Discount": discount}
