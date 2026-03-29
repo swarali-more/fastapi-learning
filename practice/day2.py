@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+
+#Path Parameter
 @app.get("/product/5")
 def get_product():
     return {"product_id": 5}
@@ -28,3 +30,12 @@ def get_city_name(city_name : str):
 def get_user_id(user_id : int):
     return {"User Info":f"Profile of user {user_id}"}
 
+
+#Query Parameter
+#@app.get("/search")
+#def search(name: str):
+    return {"search": name}
+
+@app.get("/search")
+def search(name: str = "Guest"):
+    return {"search": name}
